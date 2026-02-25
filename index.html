@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strands of Hope</title>
+  <meta name="description" content="Strands of Hope is a UK-based charity raising funds to support the vital work of Hut Hameshulash in Israel — bringing care, stability, and hope to at-risk youth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">
+        <!-- SVG: Three interwoven strands forming a braid -->
+        <svg class="logo-svg" viewBox="0 0 52 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Strand A: gold, left-to-right curve -->
+          <path d="M6 6 C6 20 26 20 26 32 C26 44 6 44 6 58"
+                stroke="#C9993F" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- Strand B: blue, right-to-left curve -->
+          <path d="M46 6 C46 20 26 20 26 32 C26 44 46 44 46 58"
+                stroke="#1B3A5C" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- Strand C: light gold, straight center -->
+          <path d="M26 6 L26 58"
+                stroke="#E8C97E" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <!-- Cross dots to suggest weaving -->
+          <circle cx="26" cy="18" r="3" fill="#FFFFFF"/>
+          <circle cx="26" cy="46" r="3" fill="#FFFFFF"/>
+        </svg>
+        <span class="nav-logo-text">Strands of Hope</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#trustees">Trustees</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <!-- Large decorative logo -->
+      <div class="hero-logo">
+        <svg viewBox="0 0 52 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6 C6 20 26 20 26 32 C26 44 6 44 6 58"
+                stroke="#C9993F" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M46 6 C46 20 26 20 26 32 C26 44 46 44 46 58"
+                stroke="rgba(255,255,255,0.75)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M26 6 L26 58"
+                stroke="#E8C97E" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <circle cx="26" cy="18" r="3" fill="rgba(255,255,255,0.6)"/>
+          <circle cx="26" cy="46" r="3" fill="rgba(255,255,255,0.6)"/>
+        </svg>
+      </div>
+
+      <h1 class="hero-title">Strands of Hope</h1>
+      <p class="hero-tagline">
+        Supporting vulnerable youth in Israel<br />
+        through <em>Hut HaMeshulash</em>
+      </p>
+      <div class="hero-actions">
+        <a href="https://meshulash.org/en/home-en/" target="_blank" rel="noopener" class="btn-primary">
+          Learn More About Hut HaMeshulash
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 2h10v10M2 12 12 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#mission" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">↓</div>
+  </section>
+
+
+  <!-- ======= MISSION BAND ======= -->
+  <section class="mission-band">
+    <div class="container">
+      <p class="mission-statement">
+        All funds raised by Strands of Hope UK directly support the programmes of
+        <strong>Hut Hameshulash</strong>, an established charity in Israel.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ======= WHO WE ARE ======= -->
+  <section id="mission" class="who-section">
+    <div class="container two-col">
+      <div class="who-text">
+        <span class="section-tag">Who We Are</span>
+        <h2>A thread of hope,<br />woven with purpose</h2>
+        <p>
+          Strands of Hope is a UK-based charity raising funds to support the vital work of
+          Hut Hameshulash in Israel. We exist to help ensure that at-risk youth — facing
+          significant social and emotional challenges — can access care, stability, and hope
+          for the future.
+        </p>
+        <p>
+          Governed by a volunteer board of trustees, we operate with complete transparency:
+          every pound raised goes directly to the programmes we support. No salaries, no
+          overheads — just impact.
+        </p>
+        <a href="https://meshulash.org/en/home-en/" target="_blank" rel="noopener" class="text-link">
+          Discover the work of Hut HaMeshulash →
+        </a>
+      </div>
+      <div class="who-visual">
+        <div class="visual-card">
+          <div class="visual-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" stroke="#C9993F" stroke-width="2"/>
+              <path d="M12 20 L18 26 L28 14" stroke="#1B3A5C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="visual-stat">100%</div>
+          <div class="visual-label">of funds go directly<br />to Israel programmes</div>
+        </div>
+        <div class="visual-card">
+          <div class="visual-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M20 6 C12 6 6 12 6 20 C6 28 12 34 20 34 C28 34 34 28 34 20 C34 16 31 12.5 27 10.5"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M20 12 L20 20 L26 23" stroke="#1B3A5C" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="visual-stat">Est. 2025</div>
+          <div class="visual-label">founded by a dedicated<br />volunteer board</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= ABOUT / TRUSTEES ======= -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <span class="section-tag">About Us</span>
+      <h2>Our Board of Trustees</h2>
+      <p class="section-intro">
+        Strands of Hope is governed by a volunteer board of trustees. No one in our team
+        takes a salary — we exist solely to channel support where it matters most.
+      </p>
+    </div>
+  </section>
+
+  <section id="trustees" class="trustees-section">
+    <div class="container">
+      <div class="trustees-grid">
+
+        <!-- Gavin Ucko -->
+        <div class="trustee-card trustee-chairman">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Gavin Ucko</h3>
+            <span class="trustee-role">Chairman</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Tomer Heimann -->
+        <div class="trustee-card">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Tomer Heimann</h3>
+            <span class="trustee-role">Trustee</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Sophie Amir -->
+        <div class="trustee-card">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Sophie Amir</h3>
+            <span class="trustee-role">Trustee</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Katie Soraff -->
+        <div class="trustee-card">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Katie Soraff</h3>
+            <span class="trustee-role">Trustee</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Annabel Sheldon -->
+        <div class="trustee-card">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Annabel Sheldon</h3>
+            <span class="trustee-role">Trustee</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Coming soon placeholder -->
+        <div class="trustee-card trustee-upcoming">
+          <div class="trustee-photo placeholder-photo upcoming-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="18" stroke="#C9993F" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+              <line x1="24" y1="16" x2="24" y2="32" stroke="#C9993F" stroke-width="2" stroke-linecap="round"/>
+              <line x1="16" y1="24" x2="32" y2="24" stroke="#C9993F" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name upcoming-name">Coming Soon</h3>
+            <span class="trustee-role">Trustee</span>
+            <p class="trustee-bio upcoming-bio">
+              A new trustee will be joining the board shortly.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Advisor -->
+      <div class="advisor-row">
+        <div class="trustee-card trustee-advisor">
+          <div class="trustee-photo placeholder-photo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="18" r="9" stroke="#C9993F" stroke-width="2" fill="none"/>
+              <path d="M6 44 C6 34 14 28 24 28 C34 28 42 34 42 44"
+                    stroke="#C9993F" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="trustee-info">
+            <h3 class="trustee-name">Neville Goldschneider</h3>
+            <span class="trustee-role">Advisor</span>
+            <p class="trustee-bio">
+              <!-- Add bio here -->
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======= DONATE PLACEHOLDER ======= -->
+  <section class="donate-section">
+    <div class="container donate-inner">
+      <div class="donate-text">
+        <h2>Support the work</h2>
+        <p>
+          Donation information will be available here once our UK bank account and
+          charity registration are in place. In the meantime, please get in touch to
+          learn how you can help.
+        </p>
+        <!-- FUTURE: Add charity registration number here -->
+        <!-- FUTURE: Add UK bank / donation link here -->
+      </div>
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+
+  <!-- ======= CONTACT ======= -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <span class="section-tag">Contact</span>
+      <h2>Get in touch</h2>
+      <p class="section-intro">
+        We welcome questions, partnership enquiries, and expressions of support.
+      </p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <rect x="2" y="4" width="16" height="12" rx="2" stroke="#C9993F" stroke-width="1.6" fill="none"/>
+            <path d="M2 7 L10 12 L18 7" stroke="#C9993F" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <a href="mailto:info@strandsofhope.org.uk" class="contact-link">info@strandsofhope.org.uk</a>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 2 C7 2 4 5 4 9 C4 14 10 18 10 18 C10 18 16 14 16 9 C16 5 13 2 10 2 Z"
+                  stroke="#C9993F" stroke-width="1.6" fill="none"/>
+            <circle cx="10" cy="9" r="2.5" stroke="#C9993F" stroke-width="1.4" fill="none"/>
+          </svg>
+          <span>United Kingdom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-svg" viewBox="0 0 52 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6 C6 20 26 20 26 32 C26 44 6 44 6 58"
+                stroke="#C9993F" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M46 6 C46 20 26 20 26 32 C26 44 46 44 46 58"
+                stroke="rgba(255,255,255,0.6)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M26 6 L26 58"
+                stroke="#E8C97E" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <circle cx="26" cy="18" r="3" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="26" cy="46" r="3" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+        <span>Strands of Hope</span>
+      </div>
+      <div class="footer-center">
+        <p class="footer-tagline">Supporting vulnerable youth in Israel through Hut HaMeshulash</p>
+        <!-- Placeholder: charity registration number -->
+        <p class="footer-reg">
+          <!-- Registered charity in England and Wales · Charity No. XXXXXXX -->
+          UK charity registration pending
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://meshulash.org/en/home-en/" target="_blank" rel="noopener">Hut HaMeshulash ↗</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Strands of Hope. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('open');
+    }
+
+    // Smooth close on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Sticky header shadow on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>

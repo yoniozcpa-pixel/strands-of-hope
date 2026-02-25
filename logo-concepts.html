@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strands of Hope — Logo Concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #1B3A5C;
+      --gold: #C9993F;
+      --gold-light: #E8C97E;
+      --white: #FFFFFF;
+      --off: #F8F7F4;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0ede8;
+      color: var(--blue);
+      padding: 3rem 1.5rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #666;
+      margin-bottom: 3rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(27,58,92,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(27,58,92,0.14);
+    }
+    .preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2.5rem 2rem;
+    }
+    .preview.dark { background: var(--blue); }
+    .preview.light { background: var(--off); }
+    .preview.gold-bg { background: linear-gradient(135deg, #1B3A5C 0%, #2d5580 100%); }
+    .logo-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .logo-name.dark-text { color: var(--blue); }
+    .logo-tagline {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    .logo-tagline.dark-text { color: #888; }
+    .card-footer {
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 0.5rem;
+    }
+    .badge.modern  { background: #e8f0fe; color: #1a56db; }
+    .badge.classic { background: #fef3c7; color: #92400e; }
+    .badge.bold    { background: #fce7f3; color: #9d174d; }
+    .badge.minimal { background: #ecfdf5; color: #065f46; }
+  </style>
+</head>
+<body>
+
+<h1>Strands of Hope</h1>
+<p class="subtitle">Logo Concepts · 8 Directions</p>
+
+<div class="grid">
+
+  <!-- ===== 1. FLAME BRAID ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="52" height="64" viewBox="0 0 52 64" fill="none">
+        <!-- Three strands rising and converging into a flame tip -->
+        <path d="M10 56 C10 42 18 36 26 24 C26 14 22 8 26 4 C30 8 26 14 26 24 C34 36 42 42 42 56"
+              stroke="#C9993F" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- inner glow strand -->
+        <path d="M18 56 C18 44 22 38 26 28 C30 38 34 44 34 56"
+              stroke="#E8C97E" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- spine -->
+        <path d="M26 56 L26 28" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- flame tip glow -->
+        <ellipse cx="26" cy="6" rx="3" ry="4" fill="#E8C97E" opacity="0.9"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge bold">Emotive</span>
+      <div class="card-title">🔥 Flame of Hope</div>
+      <p class="card-desc">Three strands rise and converge into a single flame — warmth, light, and upward movement. Strong emotional resonance.</p>
+    </div>
+  </div>
+
+  <!-- ===== 2. WOVEN CIRCLE / WREATH ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+        <!-- outer ring woven from 3 arcs in alternating colors -->
+        <circle cx="28" cy="28" r="22" stroke="#C9993F" stroke-width="3" stroke-dasharray="24 46" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="28" r="22" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-dasharray="24 46" stroke-dashoffset="23" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="28" r="22" stroke="#E8C97E" stroke-width="2" stroke-dasharray="24 46" stroke-dashoffset="46" stroke-linecap="round" fill="none"/>
+        <!-- inner "H" motif for HaMeshulash -->
+        <path d="M20 22 L20 34 M28 22 L28 34 M36 22 L36 34 M20 28 L36 28"
+              stroke="rgba(255,255,255,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge classic">Classic</span>
+      <div class="card-title">⭕ Woven Wreath</div>
+      <p class="card-desc">Three interwoven arcs form a complete circle — unity, continuity, and community. The inner mark nods to Hut HaMeshulash.</p>
+    </div>
+  </div>
+
+  <!-- ===== 3. DNA / DOUBLE HELIX ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="44" height="60" viewBox="0 0 44 60" fill="none">
+        <!-- left strand helix -->
+        <path d="M8 4 C8 14 36 18 36 28 C36 38 8 42 8 52 C8 56 22 58 22 58"
+              stroke="#C9993F" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- right strand helix -->
+        <path d="M36 4 C36 14 8 18 8 28 C8 38 36 42 36 52 C36 56 22 58 22 58"
+              stroke="rgba(255,255,255,0.75)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- connecting rungs -->
+        <line x1="22" y1="14" x2="22" y2="14" stroke="#E8C97E" stroke-width="2" stroke-linecap="round"/>
+        <path d="M10 14 C14 16 30 16 34 14" stroke="#E8C97E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <path d="M10 28 C14 30 30 30 34 28" stroke="#E8C97E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <path d="M10 42 C14 44 30 44 34 42" stroke="#E8C97E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <!-- convergence dot -->
+        <circle cx="22" cy="58" r="3.5" fill="#C9993F"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge modern">Modern</span>
+      <div class="card-title">🧬 United Helix</div>
+      <p class="card-desc">Two strands weave together like a DNA helix, converging into one point. Symbolises the UK–Israel connection becoming one.</p>
+    </div>
+  </div>
+
+  <!-- ===== 4. THREE HANDS / WEAVE ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="58" height="58" viewBox="0 0 58 58" fill="none">
+        <!-- Three curved strands radiating from center, weaving over/under -->
+        <!-- Strand 1 — top right -->
+        <path d="M29 29 C29 18 38 10 44 6" stroke="#C9993F" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M29 29 C40 29 48 34 52 40" stroke="#C9993F" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Strand 2 — left -->
+        <path d="M29 29 C18 29 10 24 6 18" stroke="rgba(255,255,255,0.75)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M29 29 C18 29 10 36 6 44" stroke="rgba(255,255,255,0.75)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Strand 3 — bottom right -->
+        <path d="M29 29 C29 40 34 48 38 52" stroke="#E8C97E" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M29 29 C20 22 14 14 14 6" stroke="#E8C97E" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- center knot -->
+        <circle cx="29" cy="29" r="5" fill="#1B3A5C" stroke="#C9993F" stroke-width="2"/>
+        <circle cx="29" cy="29" r="2" fill="#E8C97E"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge classic">Classic</span>
+      <div class="card-title">✳︎ Star Knot</div>
+      <p class="card-desc">Three strands radiate from a central knot like a six-pointed star. The centre "diamond" evokes the Magen David — a subtle nod to Israel.</p>
+    </div>
+  </div>
+
+  <!-- ===== 5. ASCENDING BRAID (minimal) ===== -->
+  <div class="card">
+    <div class="preview light">
+      <svg width="42" height="60" viewBox="0 0 42 60" fill="none">
+        <!-- Three parallel strands at bottom converging to single point at top -->
+        <!-- Left strand -->
+        <path d="M8 56 C8 48 16 42 21 32 C21 20 21 12 21 4"
+              stroke="#C9993F" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Right strand -->
+        <path d="M34 56 C34 48 26 42 21 32 C21 20 21 12 21 4"
+              stroke="#1B3A5C" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Middle wisp -->
+        <path d="M21 56 L21 32" stroke="#E8C97E" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- apex -->
+        <circle cx="21" cy="4" r="4" fill="#C9993F"/>
+        <!-- base dots -->
+        <circle cx="8"  cy="56" r="3" fill="#1B3A5C" opacity="0.3"/>
+        <circle cx="21" cy="56" r="3" fill="#E8C97E" opacity="0.5"/>
+        <circle cx="34" cy="56" r="3" fill="#1B3A5C" opacity="0.3"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name" style="color:#1B3A5C">Strands<br/>of Hope</span>
+        <span class="logo-tagline" style="color:#999">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge minimal">Minimal</span>
+      <div class="card-title">▲ Convergence</div>
+      <p class="card-desc">Three separate strands climb upward and unite at a single golden apex. Clean, minimal, aspirational — works beautifully small.</p>
+    </div>
+  </div>
+
+  <!-- ===== 6. CELTIC TREFOIL KNOT ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="58" height="58" viewBox="0 0 58 58" fill="none">
+        <!-- Trefoil-inspired: three lobes woven together -->
+        <!-- Lobe top -->
+        <path d="M29 8 C22 8 16 14 16 21 C16 26 19 28 22 29 C19 30 16 32 16 37 C16 44 22 48 29 48"
+              stroke="#C9993F" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Lobe bottom right -->
+        <path d="M29 48 C36 48 42 44 42 37 C42 32 39 30 36 29 C39 28 42 26 42 21 C42 14 36 8 29 8"
+              stroke="rgba(255,255,255,0.75)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Center connecting loop -->
+        <ellipse cx="29" cy="29" rx="7" ry="9" stroke="#E8C97E" stroke-width="2" fill="none"/>
+        <!-- decorative dots on lobes -->
+        <circle cx="29" cy="10" r="2.5" fill="#E8C97E"/>
+        <circle cx="15" cy="42" r="2.5" fill="#E8C97E"/>
+        <circle cx="43" cy="42" r="2.5" fill="#E8C97E"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge classic">Classic</span>
+      <div class="card-title">☘ Celtic Trefoil</div>
+      <p class="card-desc">A Celtic-inspired three-loop knot. The UK cultural reference is immediately felt — timeless, trustworthy, distinguished.</p>
+    </div>
+  </div>
+
+  <!-- ===== 7. ABSTRACT LETTERFORM "S" ===== -->
+  <div class="card">
+    <div class="preview gold-bg">
+      <svg width="48" height="64" viewBox="0 0 48 64" fill="none">
+        <!-- Three strands shaping a stylised S curve -->
+        <!-- Outer S arc -->
+        <path d="M38 10 C38 6 32 4 24 4 C14 4 8 10 8 18 C8 26 14 29 24 32 C34 35 40 38 40 46 C40 54 34 60 24 60 C14 60 8 58 8 54"
+              stroke="#C9993F" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Inner parallel arc (offset inward) -->
+        <path d="M32 14 C32 10 28 8 24 8 C18 8 14 12 14 18 C14 24 18 27 24 30 C30 33 36 36 36 44 C36 50 32 56 24 56 C18 56 14 54 12 52"
+              stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- Spine thread -->
+        <path d="M26 4 C26 20 26 44 26 60"
+              stroke="#E8C97E" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 6"/>
+        <!-- Terminal dots -->
+        <circle cx="37" cy="10" r="3.5" fill="#E8C97E"/>
+        <circle cx="10" cy="54" r="3.5" fill="#E8C97E"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge modern">Modern</span>
+      <div class="card-title">Ꞩ Letterform S</div>
+      <p class="card-desc">Three layered strands trace the letter "S" for <em>Strands</em> — elegant, ownable, and immediately tied to the brand name.</p>
+    </div>
+  </div>
+
+  <!-- ===== 8. STAR OF DAVID / UK STAR ===== -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <!-- Triangle pointing up (Israel △) made of woven strand -->
+        <path d="M30 6 L52 44 L8 44 Z"
+              stroke="#C9993F" stroke-width="2.8" stroke-linejoin="round" fill="none"/>
+        <!-- Triangle pointing down (UK ▽) made of different strand -->
+        <path d="M30 54 L8 16 L52 16 Z"
+              stroke="rgba(255,255,255,0.7)" stroke-width="2.8" stroke-linejoin="round" fill="none"/>
+        <!-- Third connecting strand — inner hexagon -->
+        <path d="M30 14 L43 22 L43 38 L30 46 L17 38 L17 22 Z"
+              stroke="#E8C97E" stroke-width="1.5" stroke-linejoin="round" fill="none" opacity="0.6"/>
+        <!-- Center spark -->
+        <circle cx="30" cy="30" r="4" fill="#C9993F"/>
+        <circle cx="30" cy="30" r="2" fill="#E8C97E"/>
+      </svg>
+      <div class="logo-label">
+        <span class="logo-name">Strands<br/>of Hope</span>
+        <span class="logo-tagline">UK Charity</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="badge bold">Symbolic</span>
+      <div class="card-title">✡ Two Worlds, One Heart</div>
+      <p class="card-desc">Two interwoven triangles — one for the UK, one for Israel — forming a Star of David at their meeting point. Deeply meaningful, boldly stated.</p>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center; margin-top:3rem; font-size:0.8rem; color:#aaa;">
+  All logos are SVG — scalable, screen-ready, and easily customisable.
+</p>
+
+</body>
+</html>
