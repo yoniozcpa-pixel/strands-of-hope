@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strands of Hope — Brand Identity</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:       #1B3A5C;
+  --blue-mid:   #234d74;
+  --gold:       #C9993F;
+  --gold-light: #E8C97E;
+  --gold-pale:  #F5EDD8;
+  --white:      #FFFFFF;
+  --off:        #F8F7F4;
+  --ink:        #2D3748;
+  --muted:      #718096;
+  --page-bg:    #EDEAE4;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--page-bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── SECTION WRAPPERS ───────────────────────────────────── */
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.section + .section { padding-top: 0; }
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-style: italic;
+  border-bottom: 1px solid #D4CEBE;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── COVER / HERO ───────────────────────────────────────── */
+.cover {
+  background: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(201,153,63,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cover-mark {
+  position: relative;
+  z-index: 1;
+}
+.cover-text {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.cover-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.cover-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.8;
+}
+.cover-rule {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0.6rem auto;
+  opacity: 0.6;
+}
+.cover-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.2rem;
+}
+
+/* ── CARD GRID ──────────────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.card-grid.two-col { grid-template-columns: 1fr 1fr; }
+.card-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(27,58,92,0.06), 0 1px 3px rgba(27,58,92,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(27,58,92,0.11), 0 2px 8px rgba(27,58,92,0.06);
+}
+.card-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 2rem;
+  min-height: 200px;
+}
+.card-preview.bg-blue  { background: var(--blue); }
+.card-preview.bg-off   { background: var(--off); }
+.card-preview.bg-pale  { background: var(--gold-pale); }
+.card-preview.bg-white { background: var(--white); }
+.card-preview.bg-grad  { background: linear-gradient(155deg, #162D49 0%, #1B3A5C 50%, #234d74 100%); }
+.card-body {
+  padding: 1.4rem 1.6rem;
+  border-top: 1px solid #F0ECE4;
+}
+.card-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+.tag-primary { background: #D4EDDA; color: #155724; }
+.tag-alt     { background: #E8E8E8; color: #555; }
+.tag-uk      { background: #dde8f5; color: #1B3A5C; }
+
+.card-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+}
+.card-desc {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ── LOCKUP COMPONENTS ──────────────────────────────────── */
+.lockup-h { display: flex; align-items: center; gap: 1rem; }
+.lockup-v { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-align: center; }
+
+.lname {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+.lsub {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+.lname-white { color: var(--white); }
+.lname-blue  { color: var(--blue); }
+.lsub-gold   { color: var(--gold-light); opacity: 0.7; }
+.lsub-muted  { color: #aaa; }
+.lsub-blue   { color: #7a9bbf; }
+
+/* ── MOCKUPS ────────────────────────────────────────────── */
+
+/* WEBSITE NAVBAR MOCKUP */
+.mockup-nav {
+  background: var(--blue);
+  border-radius: 10px 10px 0 0;
+  padding: 0.85rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(27,58,92,0.25);
+}
+.mockup-nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+.mockup-nav-links li {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.05em;
+}
+.mockup-nav-body {
+  background: var(--off);
+  border-radius: 0 0 10px 10px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.mockup-nav-hero-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+.mockup-nav-hero-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.mockup-nav-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* BUSINESS CARD MOCKUP */
+.biz-card {
+  width: 100%;
+  aspect-ratio: 1.75;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  display: flex;
+}
+.biz-front {
+  flex: 1;
+  background: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.4rem 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+.biz-front::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 18px solid rgba(201,153,63,0.12);
+}
+.biz-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.1;
+}
+.biz-tagline {
+  font-size: 0.52rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.65;
+  margin-top: 3px;
+}
+.biz-person {
+  text-align: left;
+}
+.biz-person-name { font-size: 0.7rem; font-weight: 600; color: var(--white); }
+.biz-person-title { font-size: 0.58rem; color: rgba(255,255,255,0.45); margin-top: 1px; }
+.biz-person-detail { font-size: 0.55rem; color: var(--gold-light); opacity: 0.6; margin-top: 4px; line-height: 1.6; }
+
+/* LETTERHEAD MOCKUP */
+.letterhead {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(27,58,92,0.10);
+}
+.lh-header {
+  background: var(--blue);
+  padding: 1.4rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lh-body {
+  padding: 2rem;
+}
+.lh-line {
+  height: 7px;
+  border-radius: 4px;
+  background: #EEE;
+  margin-bottom: 0.6rem;
+}
+.lh-line:nth-child(1) { width: 80%; }
+.lh-line:nth-child(2) { width: 65%; }
+.lh-line:nth-child(3) { width: 90%; margin-top: 1.2rem; }
+.lh-line:nth-child(4) { width: 72%; }
+.lh-line:nth-child(5) { width: 55%; }
+.lh-footer {
+  border-top: 1px solid #EEE;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lh-footer-text { font-size: 0.6rem; color: #aaa; letter-spacing: 0.04em; }
+.lh-gold-bar { width: 100%; height: 3px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%); }
+
+/* ── COLOUR PALETTE ─────────────────────────────────────── */
+.palette {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.swatch-wrap { flex: 1; min-width: 100px; }
+.swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  margin-bottom: 0.75rem;
+}
+.swatch-name { font-size: 0.75rem; font-weight: 600; margin-bottom: 2px; }
+.swatch-hex  { font-size: 0.65rem; color: var(--muted); font-family: 'Courier New', monospace; }
+.swatch-use  { font-size: 0.62rem; color: #aaa; margin-top: 2px; line-height: 1.4; }
+
+/* ── TYPOGRAPHY ─────────────────────────────────────────── */
+.type-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 16px rgba(27,58,92,0.06);
+}
+.type-specimen { border-bottom: 1px solid #EEE; padding-bottom: 1.2rem; }
+.type-specimen:last-child { border-bottom: none; padding-bottom: 0; }
+.type-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: 0.3rem;
+}
+
+/* ── SIZE REFERENCE ─────────────────────────────────────── */
+.sizes-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background: var(--blue);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+}
+.size-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.size-label {
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+/* ── FULL-WIDTH BRAND STRIPE ────────────────────────────── */
+.brand-stripe {
+  background: var(--blue);
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+/* ── CLEAR-SPACE BOX ────────────────────────────────────── */
+.clearspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  border: 1.5px dashed #C9B593;
+  border-radius: 14px;
+  background: var(--white);
+  position: relative;
+}
+.clearspace::before {
+  content: '— minimum clear space —';
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: #C9B593;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .card-grid.two-col,
+  .card-grid.three-col { grid-template-columns: 1fr; }
+  .mockup-nav-links { display: none; }
+  .palette { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HIDDEN SVG DEFS — ALL LOGO MARKS
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute; overflow:hidden;">
+<defs>
+
+<!-- ════════════════════════════════════════════════════════
+     LOGO-BRAID   viewBox="0 0 60 88"
+     3-strand braid (Gold / White / Light-Gold) narrowing to
+     a spark at the top. Over/under done with BG-colour masks.
+     BG = var(--blue) #1B3A5C on dark,  white for light variant
+     ════════════════════════════════════════════════════════ -->
+<symbol id="braid-dark" viewBox="0 0 60 88">
+  <!-- CROSSING Y positions: 80, 64, 48, 32, 18
+       Strand positions:
+         A (Gold)     starts x=10, crosses to x=50 at y=80, back to x=10 at y=64…
+         B (White)    starts x=30 (centre)
+         C (LtGold)   starts x=50
+  -->
+
+  <!-- ── LAYER 1: UNDER-strand segments ── -->
+  <!-- y=80 crossing: B under A -->
+  <path d="M30,88 C30,84 36,82 40,80"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M40,80 C44,78 50,76 50,72"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+  <!-- y=64 crossing: C under B -->
+  <path d="M10,80 C10,76 16,74 20,72"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M20,72 C24,70 28,66 30,64"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M30,64 C32,62 36,60 40,58"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- y=48 crossing: A under C -->
+  <path d="M50,64 C50,60 46,58 44,56"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M44,56 C42,54 40,52 40,48"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- y=32 crossing: B under A -->
+  <path d="M10,48 C10,44 14,42 18,40"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M18,40 C22,38 28,36 30,32"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+
+  <!-- y=18 crossing: C under B -->
+  <path d="M50,32 C50,28 46,26 44,24"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M44,24 C42,22 40,20 40,18"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- ── LAYER 2: BG masks at crossing centres ── -->
+  <circle cx="40" cy="80" r="5"   fill="#1B3A5C"/>
+  <circle cx="30" cy="64" r="4.5" fill="#1B3A5C"/>
+  <circle cx="40" cy="48" r="5"   fill="#1B3A5C"/>
+  <circle cx="30" cy="32" r="5"   fill="#1B3A5C"/>
+  <circle cx="40" cy="18" r="4.5" fill="#1B3A5C"/>
+
+  <!-- ── LAYER 3: OVER-strand segments ── -->
+  <!-- Strand A (Gold) — starts x=10 at bottom -->
+  <path d="M10,88  C10,84 14,82 18,80"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M18,80  C22,78 28,76 30,72"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- A travels right: 72→64 -->
+  <path d="M30,72 C34,70 40,68 40,64"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- A crosses 64 (over) -->
+  <path d="M40,64 C40,60 36,56 30,52"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M30,52 C28,50 24,48 20,48"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- A travels: 48→32 -->
+  <path d="M20,48 C16,46 12,44 10,40"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M10,40 C10,36 16,34 18,32"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- A crosses 32 (over) -->
+  <path d="M18,32 C22,30 30,28 34,26"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M34,26 C38,24 42,22 44,18"  stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- A → top -->
+  <path d="M44,18 C46,14 44,10 30,4"  stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- Strand B (White) — starts x=30 at bottom -->
+  <!-- B goes under at y=80, comes out x=50, travels to y=64 crossing (over C) -->
+  <path d="M50,72 C50,68 44,66 40,64"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- B over C at y=64 -->
+  <path d="M40,64 C38,62 34,60 30,56"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M30,56 C26,52 20,50 10,48"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- B travels left: 48→32 -->
+  <path d="M10,48 C10,44 14,40 18,38"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- B crosses 32 (under A — already drawn under) -->
+  <path d="M30,32 C32,30 36,28 40,26"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M40,26 C44,24 50,22 50,18"  stroke="rgba(255,255,255,.88)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- B over C at y=18 -->
+  <path d="M50,18 C50,14 44,10 30,4"  stroke="rgba(255,255,255,.88)" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- Strand C (LtGold) — starts x=50 at bottom -->
+  <path d="M50,88  C50,84 46,82 44,80"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M44,80  C40,78 36,76 30,72"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- C travels 72→64 -->
+  <path d="M30,72 C24,70 18,68 10,64"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- C under B at y=64 (already drawn under, now continue from left) -->
+  <!-- C re-emerges and goes right towards y=48 -->
+  <path d="M40,58 C44,56 50,54 50,48"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- C over A at y=48 -->
+  <path d="M50,48 C50,44 44,40 40,38"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M40,38 C36,36 30,34 30,32"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- C travels right: 32→18 -->
+  <path d="M30,32 C28,28 24,24 20,22"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M20,22 C18,20 18,18 20,18"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- C → top  -->
+  <path d="M20,18 C16,14 20,8 30,4"   stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+  <!-- ── Convergence spark ── -->
+  <circle cx="30" cy="3"  r="5"   fill="#C9993F" opacity="0.95"/>
+  <circle cx="30" cy="3"  r="3"   fill="#E8C97E"/>
+  <circle cx="30" cy="3"  r="1.4" fill="#FFFFFF"/>
+</symbol>
+
+<!-- Light-BG version (blue strand instead of white) -->
+<symbol id="braid-light" viewBox="0 0 60 88">
+  <path d="M30,88 C30,84 36,82 40,80"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M40,80 C44,78 50,76 50,72"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M10,80 C10,76 16,74 20,72"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M20,72 C24,70 28,66 30,64"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M30,64 C32,62 36,60 40,58"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M50,64 C50,60 46,58 44,56"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M44,56 C42,54 40,52 40,48"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M10,48 C10,44 14,42 18,40"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M18,40 C22,38 28,36 30,32"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M50,32 C50,28 46,26 44,24"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M44,24 C42,22 40,20 40,18"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- masks (white bg) -->
+  <circle cx="40" cy="80" r="5"   fill="#F8F7F4"/>
+  <circle cx="30" cy="64" r="4.5" fill="#F8F7F4"/>
+  <circle cx="40" cy="48" r="5"   fill="#F8F7F4"/>
+  <circle cx="30" cy="32" r="5"   fill="#F8F7F4"/>
+  <circle cx="40" cy="18" r="4.5" fill="#F8F7F4"/>
+  <!-- over segments -->
+  <path d="M10,88  C10,84 14,82 18,80"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M18,80  C22,78 28,76 30,72"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M30,72 C34,70 40,68 40,64"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M40,64 C40,60 36,56 30,52"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M30,52 C28,50 24,48 20,48"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M20,48 C16,46 12,44 10,40"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M10,40 C10,36 16,34 18,32"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M18,32 C22,30 30,28 34,26"  stroke="#C9993F" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M34,26 C38,24 42,22 44,18"  stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M44,18 C46,14 44,10 30,4"  stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M50,72 C50,68 44,66 40,64"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M40,64 C38,62 34,60 30,56"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M30,56 C26,52 20,50 10,48"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M30,32 C32,30 36,28 40,26"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M40,26 C44,24 50,22 50,18"  stroke="#1B3A5C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M50,18 C50,14 44,10 30,4"  stroke="#1B3A5C" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M50,88  C50,84 46,82 44,80"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M44,80  C40,78 36,76 30,72"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M30,72 C24,70 18,68 10,64"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M40,58 C44,56 50,54 50,48"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M50,48 C50,44 44,40 40,38"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M40,38 C36,36 30,34 30,32"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M30,32 C28,28 24,24 20,22"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M20,22 C18,20 18,18 20,18"  stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M20,18 C16,14 20,8 30,4"   stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <circle cx="30" cy="3"  r="5"   fill="#C9993F" opacity="0.95"/>
+  <circle cx="30" cy="3"  r="3"   fill="#E8C97E"/>
+  <circle cx="30" cy="3"  r="1.4" fill="#1B3A5C"/>
+</symbol>
+
+<!-- Monochrome (all gold, for 1-colour print) -->
+<symbol id="braid-mono" viewBox="0 0 60 88">
+  <path d="M10,88 C10,80 20,70 28,64 C36,58 46,54 50,48 C54,42 50,34 44,26 C38,18 34,10 30,4"
+        stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M30,88 C30,80 32,72 32,64 C32,56 28,48 26,40 C24,32 28,24 30,4"
+        stroke="#C9993F" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M50,88 C50,80 40,70 32,64 C24,58 14,54 10,48 C6,42 10,34 16,26 C22,18 26,10 30,4"
+        stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <circle cx="30" cy="3"  r="5"   fill="#C9993F"/>
+  <circle cx="30" cy="3"  r="2.5" fill="#E8C97E"/>
+  <circle cx="30" cy="3"  r="1.2" fill="#FFFFFF"/>
+</symbol>
+
+</defs>
+</svg>
+
+
+<!-- ============================================================
+     1 ▸ COVER
+     ============================================================ -->
+<div class="cover">
+  <div class="cover-mark">
+    <svg width="80" height="117" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+  </div>
+  <div class="cover-text">
+    <div class="cover-sub">Brand Identity · 2026</div>
+    <div class="cover-name">Strands of Hope</div>
+    <div class="cover-rule"></div>
+    <div class="cover-tagline">A UK Charity Supporting At-Risk Youth in Israel</div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     2 ▸ LOGO LOCKUPS
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">01 — Logo Lockups</p>
+
+  <div class="card-grid">
+
+    <!-- Primary — horizontal, dark -->
+    <div class="card">
+      <div class="card-preview bg-blue">
+        <div class="lockup-h">
+          <svg width="46" height="67" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+          <div>
+            <div class="lname lname-white" style="font-size:1.35rem;">Strands of Hope</div>
+            <div class="lsub lsub-gold">UK Charity · Supporting Youth in Israel</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-primary">★ Primary</span>
+        <p class="card-title">Horizontal — Dark Background</p>
+        <p class="card-desc">Default lockup. Use on blue or dark surfaces — website header, presentations, banners.</p>
+      </div>
+    </div>
+
+    <!-- Secondary — horizontal, light -->
+    <div class="card">
+      <div class="card-preview bg-off">
+        <div class="lockup-h">
+          <svg width="46" height="67" viewBox="0 0 60 88"><use href="#braid-light"/></svg>
+          <div>
+            <div class="lname lname-blue" style="font-size:1.35rem;">Strands of Hope</div>
+            <div class="lsub lsub-muted">UK Charity · Supporting Youth in Israel</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-alt">Secondary</span>
+        <p class="card-title">Horizontal — Light Background</p>
+        <p class="card-desc">For documents, letterheads, and light-coloured surfaces.</p>
+      </div>
+    </div>
+
+    <!-- Stacked — dark -->
+    <div class="card">
+      <div class="card-preview bg-grad">
+        <div class="lockup-v">
+          <svg width="52" height="76" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+          <div>
+            <div class="lname lname-white" style="font-size:1.5rem;">Strands of Hope</div>
+            <div class="lsub lsub-gold" style="margin-top:5px;">UK Charity · At-Risk Youth · Israel</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-alt">Stacked</span>
+        <p class="card-title">Centred Lockup</p>
+        <p class="card-desc">Square formats, event materials, social media profiles, certificates.</p>
+      </div>
+    </div>
+
+    <!-- Icon only -->
+    <div class="card">
+      <div class="card-preview bg-blue" style="gap:2rem;">
+        <svg width="72" height="105" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+        <svg width="44" height="64" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+        <svg width="28" height="41" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      </div>
+      <div class="card-body">
+        <p class="card-title">Icon Mark — Three Sizes</p>
+        <p class="card-desc">Standalone braid mark. Use for favicons, app icons, social media avatars, and embroidery.</p>
+      </div>
+    </div>
+
+    <!-- Pale/Gold background -->
+    <div class="card">
+      <div class="card-preview bg-pale">
+        <div class="lockup-h">
+          <svg width="46" height="67" viewBox="0 0 60 88"><use href="#braid-light"/></svg>
+          <div>
+            <div class="lname lname-blue" style="font-size:1.35rem;">Strands of Hope</div>
+            <div class="lsub lsub-blue">Registered UK Charity</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-uk">UK Charity</span>
+        <p class="card-title">Warm Pale Background</p>
+        <p class="card-desc">For fundraising brochures, reports, and warm-toned collateral.</p>
+      </div>
+    </div>
+
+    <!-- Monochrome -->
+    <div class="card">
+      <div class="card-preview bg-white" style="flex-direction:column; gap:1.5rem;">
+        <div class="lockup-h">
+          <svg width="40" height="58" viewBox="0 0 60 88"><use href="#braid-mono"/></svg>
+          <div class="lname lname-blue" style="font-size:1.2rem;">Strands of Hope</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-alt">Monochrome</span>
+        <p class="card-title">Single-Colour Version</p>
+        <p class="card-desc">For single-colour print — embossing, foil stamp, rubber stamps, or when colour printing is unavailable.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     3 ▸ CLEAR SPACE & SIZE REFERENCE
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">02 — Clear Space &amp; Sizes</p>
+
+  <div class="clearspace" style="margin-bottom:1.5rem;">
+    <div style="position:relative; display:inline-block; padding:24px;">
+      <div style="position:absolute;inset:0;border:1px dashed rgba(201,153,63,0.4);border-radius:4px;"></div>
+      <svg width="60" height="87" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:0.72rem;color:var(--muted);margin-bottom:2.5rem;">
+    Maintain a minimum clear space equal to the width of the braid on all sides.
+  </p>
+
+  <div class="sizes-row">
+    <div class="size-item">
+      <svg width="16" height="23" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      <span class="size-label">16 px<br/>Favicon</span>
+    </div>
+    <div class="size-item">
+      <svg width="28" height="41" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      <span class="size-label">28 px<br/>Small</span>
+    </div>
+    <div class="size-item">
+      <svg width="44" height="64" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      <span class="size-label">44 px<br/>Nav</span>
+    </div>
+    <div class="size-item">
+      <svg width="72" height="105" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      <span class="size-label">72 px<br/>Hero</span>
+    </div>
+    <div class="size-item">
+      <svg width="108" height="157" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+      <span class="size-label">108 px<br/>Print</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     4 ▸ COLOUR PALETTE
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">03 — Brand Colours</p>
+  <div class="palette">
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#1B3A5C;"></div>
+      <div class="swatch-name">Deep Blue</div>
+      <div class="swatch-hex">#1B3A5C</div>
+      <div class="swatch-use">Primary brand / backgrounds / text</div>
+    </div>
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#C9993F;"></div>
+      <div class="swatch-name">Gold</div>
+      <div class="swatch-hex">#C9993F</div>
+      <div class="swatch-use">Main accent / CTA buttons / Strand A</div>
+    </div>
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#E8C97E;"></div>
+      <div class="swatch-name">Light Gold</div>
+      <div class="swatch-hex">#E8C97E</div>
+      <div class="swatch-use">Secondary accent / Strand C / highlights</div>
+    </div>
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#F5EDD8; border:1px solid #e0d5c1;"></div>
+      <div class="swatch-name">Pale Gold</div>
+      <div class="swatch-hex">#F5EDD8</div>
+      <div class="swatch-use">Backgrounds / warm tints</div>
+    </div>
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#F8F7F4; border:1px solid #e2d9cc;"></div>
+      <div class="swatch-name">Off-White</div>
+      <div class="swatch-hex">#F8F7F4</div>
+      <div class="swatch-use">Page background / light surfaces</div>
+    </div>
+    <div class="swatch-wrap">
+      <div class="swatch" style="background:#FFFFFF; border:1px solid #ddd;"></div>
+      <div class="swatch-name">White</div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-use">Strand B / reversed text / cards</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     5 ▸ TYPOGRAPHY
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">04 — Typography</p>
+  <div class="type-row">
+    <div class="type-specimen">
+      <p class="type-label">Display / Charity Name — Cormorant Garamond SemiBold</p>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:600; line-height:1; color:var(--blue);">Strands of Hope</div>
+    </div>
+    <div class="type-specimen">
+      <p class="type-label">Heading — Cormorant Garamond Medium</p>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:500; color:var(--blue);">Supporting Vulnerable Youth in Israel</div>
+    </div>
+    <div class="type-specimen">
+      <p class="type-label">Sub-heading — Cormorant Garamond Italic</p>
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.2rem; color:var(--muted);">Through Hut HaMeshulash — the Triple Strand</div>
+    </div>
+    <div class="type-specimen">
+      <p class="type-label">Body — Inter Regular 16px / 1.7 leading</p>
+      <div style="font-family:'Inter',sans-serif; font-size:1rem; color:var(--ink); line-height:1.7; max-width:600px;">
+        Strands of Hope is a registered UK charity that raises funds to support the vital work of Hut HaMeshulash in Israel — bringing care, stability, and a future to at-risk young people.
+      </div>
+    </div>
+    <div class="type-specimen">
+      <p class="type-label">Label / Section Tag — Inter Medium 0.72rem, tracked</p>
+      <div style="font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold);">Our Mission · About Us · Trustees · Donate</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     6 ▸ BRAND APPLICATIONS
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">05 — Applications</p>
+
+  <div class="card-grid two-col" style="margin-bottom:1.5rem;">
+
+    <!-- Website navbar mockup -->
+    <div>
+      <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Website Header</p>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(27,58,92,0.12);">
+        <div class="mockup-nav">
+          <div class="lockup-h" style="gap:0.6rem;">
+            <svg width="26" height="38" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+            <div class="lname lname-white" style="font-size:0.9rem;">Strands of Hope</div>
+          </div>
+          <ul class="mockup-nav-links">
+            <li>Our Mission</li>
+            <li>About Us</li>
+            <li>Trustees</li>
+            <li>Donate</li>
+          </ul>
+        </div>
+        <div class="mockup-nav-body">
+          <div class="mockup-nav-hero-text">Building futures, one strand at a time.</div>
+          <div class="mockup-nav-hero-sub">A UK charity supporting at-risk youth in Israel</div>
+          <div class="mockup-nav-btn">Donate Now</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business card mockup -->
+    <div>
+      <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Business Card</p>
+      <div class="biz-card">
+        <div class="biz-front">
+          <div>
+            <svg width="34" height="50" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+          </div>
+          <div>
+            <div class="biz-name">Strands of Hope</div>
+            <div class="biz-tagline">Registered UK Charity</div>
+          </div>
+          <div class="biz-person">
+            <div class="biz-person-name">Jane Smith</div>
+            <div class="biz-person-title">Trustee &amp; Co-Founder</div>
+            <div class="biz-person-detail">jane@strands-of-hope.org<br/>strands-of-hope.onrender.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Letterhead -->
+  <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Letterhead</p>
+  <div class="letterhead">
+    <div class="lh-header">
+      <div class="lockup-h" style="gap:0.75rem;">
+        <svg width="30" height="44" viewBox="0 0 60 88"><use href="#braid-dark"/></svg>
+        <div>
+          <div class="lname lname-white" style="font-size:1.1rem;">Strands of Hope</div>
+          <div class="lsub lsub-gold">Registered UK Charity</div>
+        </div>
+      </div>
+      <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);text-align:right;line-height:1.7;">
+        strands-of-hope.onrender.com<br/>
+        info@strands-of-hope.org
+      </div>
+    </div>
+    <div class="lh-gold-bar"></div>
+    <div class="lh-body">
+      <div class="lh-line"></div>
+      <div class="lh-line"></div>
+      <div class="lh-line"></div>
+      <div class="lh-line"></div>
+      <div class="lh-line"></div>
+    </div>
+    <div class="lh-footer">
+      <div class="lh-footer-text">Strands of Hope · Registered UK Charity</div>
+      <svg width="18" height="26" viewBox="0 0 60 88"><use href="#braid-mono"/></svg>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     7 ▸ BRAND CONCEPT NOTE
+     ============================================================ -->
+<div class="section">
+  <p class="section-heading">06 — Design Rationale</p>
+  <div style="background:var(--white);border-radius:16px;padding:2.5rem;box-shadow:0 2px 16px rgba(27,58,92,0.06);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin-bottom:0.75rem;color:var(--blue);">The Mark</h3>
+        <p style="font-size:0.82rem;line-height:1.7;color:var(--muted);">
+          Three strands braid upward and converge at a single point of light. Each strand represents a pillar of the organisation's work: the UK community, the Israeli charity HaMeshulash, and the at-risk youth it serves. Together — like the Biblical triple cord (Ecclesiastes 4:12) — they are not easily broken.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin-bottom:0.75rem;color:var(--blue);">Colour Language</h3>
+        <p style="font-size:0.82rem;line-height:1.7;color:var(--muted);">
+          <strong style="color:var(--gold);">Gold</strong> evokes warmth, hope, and the history of the Jewish community.
+          <strong style="color:#4a6fa5;">Deep Blue</strong> references the British sky and the Israeli flag.
+          <strong style="color:var(--ink);">White</strong> stands for honesty, clarity, and the purity of the mission.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin-bottom:0.75rem;color:var(--blue);">Typography</h3>
+        <p style="font-size:0.82rem;line-height:1.7;color:var(--muted);">
+          <em>Cormorant Garamond</em> brings the gravitas and warmth of established British philanthropic institutions. <em>Inter</em> provides modern clarity for navigation and body text — grounding the brand in contemporary digital practice.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin-bottom:0.75rem;color:var(--blue);">Connection to HaMeshulash</h3>
+        <p style="font-size:0.82rem;line-height:1.7;color:var(--muted);">
+          The name <em>Hut HaMeshulash</em> (החוט המשולש) literally means "the triple strand". The logo is therefore a direct visual translation of the Israeli charity's own name — creating a seamless visual bridge between the UK donor community and the Israeli organisation on the ground.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

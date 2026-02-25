@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strands of Hope — Final Logo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue: #1B3A5C;
+    --blue-light: #2d5580;
+    --gold: #C9993F;
+    --gold-light: #E8C97E;
+    --white: #FFFFFF;
+    --off: #F8F7F4;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f0ede8;
+    color: var(--blue);
+    padding: 2rem 1.5rem 4rem;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #888;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto 3rem;
+  }
+  .card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(27,58,92,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(27,58,92,0.13);
+  }
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    min-height: 220px;
+  }
+  .preview.dark   { background: var(--blue); }
+  .preview.light  { background: var(--off); }
+  .preview.grad   { background: linear-gradient(135deg, #1B3A5C, #234d74); }
+  .preview.white-bg { background: var(--white); }
+  .card-info {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid #eee;
+  }
+  .card-info h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .card-info p {
+    font-size: 0.78rem;
+    color: #777;
+    line-height: 1.5;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 0.6rem;
+  }
+  .badge.recommended {
+    background: #d4edda;
+    color: #155724;
+  }
+  .badge.alt {
+    background: #e8e8e8;
+    color: #555;
+  }
+
+  /* Full-width hero section */
+  .hero-section {
+    max-width: 1300px;
+    margin: 0 auto 3rem;
+    background: var(--blue);
+    border-radius: 14px;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 20px rgba(27,58,92,0.15);
+  }
+
+  /* Lockup: icon + text side by side */
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .lockup-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .lockup-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .lockup-tagline {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 3px;
+  }
+
+  /* Stacked lockup */
+  .stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .stacked .lockup-name {
+    font-size: 2rem;
+  }
+  .stacked .lockup-tagline {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+  }
+
+  /* Size demos */
+  .sizes {
+    max-width: 1300px;
+    margin: 0 auto 3rem;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(27,58,92,0.07);
+  }
+  .sizes h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .sizes-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .size-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .size-item span {
+    font-size: 0.7rem;
+    color: #999;
+    letter-spacing: 0.06em;
+  }
+
+  @media (max-width: 700px) {
+    .grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Strands of Hope</h1>
+<p class="subtitle">Final Logo Design — Brand Identity</p>
+
+<!-- ========= HIDDEN SVG DEFS ========= -->
+<svg width="0" height="0" style="position:absolute">
+<defs>
+
+<!-- ===== MAIN LOGO: 3-strand braid forming a flame/hope shape ===== -->
+<symbol id="logo-main" viewBox="0 0 100 120">
+  <!-- Three strands weave upward from base, converging into a flame of hope -->
+
+  <!-- Background glow (soft) -->
+  <ellipse cx="50" cy="90" rx="18" ry="4" fill="rgba(201,153,63,0.15)"/>
+
+  <!-- STRAND A — Gold #C9993F (left strand) -->
+  <!-- Under segment at crossing 1 -->
+  <path d="M28,108 C28,98 36,92 42,84" stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- Over segment (crosses over B) -->
+  <path d="M42,84 C48,76 56,76 58,68" stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- Continue upward left -->
+  <path d="M58,68 C54,56 44,48 42,38" stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Top left curve -->
+  <path d="M42,38 C40,28 44,18 50,10" stroke="#C9993F" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+  <!-- STRAND B — White (center strand) -->
+  <path d="M50,108 C50,96 50,90 50,82" stroke="rgba(255,255,255,0.92)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M50,82 C50,72 46,66 44,58" stroke="rgba(255,255,255,0.92)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M44,58 C42,50 46,40 50,30" stroke="rgba(255,255,255,0.92)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M50,30 C52,24 51,16 50,10" stroke="rgba(255,255,255,0.92)" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- STRAND C — Light Gold #E8C97E (right strand) -->
+  <path d="M72,108 C72,98 64,92 58,84" stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M58,84 C52,76 44,76 42,68" stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M42,68 C46,56 56,48 58,38" stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M58,38 C60,28 56,18 50,10" stroke="#E8C97E" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- Convergence point: spark of hope at top -->
+  <circle cx="50" cy="8" r="5" fill="#C9993F" opacity="0.9"/>
+  <circle cx="50" cy="8" r="3" fill="#E8C97E"/>
+  <circle cx="50" cy="8" r="1.5" fill="#FFFFFF"/>
+</symbol>
+
+<!-- ===== ICON-ONLY: Compact circular version ===== -->
+<symbol id="logo-icon" viewBox="0 0 80 80">
+  <!-- Circular badge background -->
+  <circle cx="40" cy="40" r="38" fill="none" stroke="rgba(201,153,63,0.25)" stroke-width="1.5"/>
+  
+  <!-- Compact 3-strand braid -->
+  <!-- Strand A - Gold -->
+  <path d="M26,66 C26,58 34,52 38,46 C42,40 48,40 50,34 C48,26 44,20 40,16 C38,12 42,8 44,6" 
+        stroke="#C9993F" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <!-- Strand B - White -->
+  <path d="M40,66 C40,56 40,52 40,46 C40,38 38,34 36,28 C38,22 40,16 40,10 C40,8 40,6 40,4" 
+        stroke="rgba(255,255,255,0.92)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Strand C - Light Gold -->
+  <path d="M54,66 C54,58 46,52 42,46 C38,40 32,40 30,34 C32,26 36,20 40,16 C42,12 38,8 36,6" 
+        stroke="#E8C97E" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- Top convergence -->
+  <circle cx="40" cy="5" r="3.5" fill="#C9993F" opacity="0.9"/>
+  <circle cx="40" cy="5" r="2" fill="#E8C97E"/>
+  <circle cx="40" cy="5" r="1" fill="#FFFFFF"/>
+</symbol>
+
+<!-- ===== MINIMAL MARK ===== -->
+<symbol id="logo-minimal" viewBox="0 0 60 76">
+  <!-- 3 strands converge upward like a reversed tree / torch -->
+  
+  <!-- Strand A - Gold (left) -->
+  <path d="M14,72 C14,60 22,52 26,44 C30,36 34,32 34,24 C34,16 32,12 30,6" 
+        stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Strand B - White (center) -->
+  <path d="M30,72 C30,60 30,52 30,44 C30,36 28,32 28,24 C28,16 30,12 30,6" 
+        stroke="rgba(255,255,255,0.9)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Strand C - Light Gold (right) -->
+  <path d="M46,72 C46,60 38,52 34,44 C30,36 26,32 26,24 C26,16 28,12 30,6" 
+        stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Hope spark -->
+  <circle cx="30" cy="5" r="4" fill="#C9993F"/>
+  <circle cx="30" cy="5" r="2.5" fill="#E8C97E"/>
+  <circle cx="30" cy="5" r="1.2" fill="#FFFFFF"/>
+</symbol>
+
+<!-- ===== ELEGANT BRAID KNOT ===== -->
+<symbol id="logo-knot" viewBox="0 0 100 100">
+  <!-- Three strands form a Celtic-inspired eternal knot -->
+  
+  <!-- Strand A - Gold: flows left-top to right-bottom -->
+  <path d="M20,20 C30,30 45,25 50,35 C55,45 45,55 50,65 C55,75 70,70 80,80" 
+        stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Strand B - White: flows top-center to bottom-center  -->
+  <path d="M50,12 C45,28 35,35 35,50 C35,65 45,72 50,88" 
+        stroke="rgba(255,255,255,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Strand C - Light Gold: flows right-top to left-bottom -->
+  <path d="M80,20 C70,30 55,25 50,35 C45,45 55,55 50,65 C45,75 30,70 20,80" 
+        stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- crossing cover circles for depth -->
+  <circle cx="50" cy="35" r="4" fill="#1B3A5C"/>
+  <circle cx="50" cy="65" r="4" fill="#1B3A5C"/>
+
+  <!-- Re-draw over segments for depth illusion -->
+  <!-- A goes OVER at y=35 -->
+  <path d="M45,25 C48,30 50,33 50,35 C50,37 52,40 55,45" 
+        stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- C goes OVER at y=65 -->
+  <path d="M55,55 C52,60 50,63 50,65 C50,67 48,70 45,75" 
+        stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- Top & bottom accent dots -->
+  <circle cx="50" cy="10" r="3" fill="#C9993F"/>
+  <circle cx="50" cy="90" r="3" fill="#E8C97E"/>
+</symbol>
+
+</defs>
+</svg>
+
+
+<!-- ========================================= -->
+<!--              HERO LOCKUP                  -->
+<!-- ========================================= -->
+<div class="hero-section">
+  <span class="badge recommended">★ Recommended Lockup</span>
+  <div class="stacked">
+    <svg width="90" height="108" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+    <div>
+      <div class="lockup-name" style="color:var(--white);">Strands of Hope</div>
+      <div class="lockup-tagline" style="color:var(--gold-light);">UK Charity · Supporting At-Risk Youth in Israel</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================= -->
+<!--              LOGO VARIANTS                -->
+<!-- ========================================= -->
+<div class="grid">
+
+  <!-- 1. Main Logo — Dark BG -->
+  <div class="card">
+    <div class="preview dark">
+      <div class="lockup">
+        <svg width="56" height="68" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+        <div class="lockup-text">
+          <div class="lockup-name" style="color:var(--white);">Strands of Hope</div>
+          <div class="lockup-tagline" style="color:var(--gold-light);">Supporting Youth in Israel</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-info">
+      <span class="badge recommended">★ Primary</span>
+      <h3>Horizontal Lockup — Dark</h3>
+      <p>The main logo configuration. Three strands converge upward into a spark of hope. Best used on blue or dark backgrounds.</p>
+    </div>
+  </div>
+
+  <!-- 2. Main Logo — Light BG -->
+  <div class="card">
+    <div class="preview light">
+      <div class="lockup">
+        <svg width="56" height="68" viewBox="0 0 100 120">
+          <!-- Re-color for light background -->
+          <path d="M28,108 C28,98 36,92 42,84" stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+          <path d="M42,84 C48,76 56,76 58,68" stroke="#C9993F" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+          <path d="M58,68 C54,56 44,48 42,38" stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M42,38 C40,28 44,18 50,10" stroke="#C9993F" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <path d="M50,108 C50,96 50,90 50,82" stroke="#1B3A5C" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M50,82 C50,72 46,66 44,58" stroke="#1B3A5C" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M44,58 C42,50 46,40 50,30" stroke="#1B3A5C" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <path d="M50,30 C52,24 51,16 50,10" stroke="#1B3A5C" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M72,108 C72,98 64,92 58,84" stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M58,84 C52,76 44,76 42,68" stroke="#E8C97E" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M42,68 C46,56 56,48 58,38" stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <path d="M58,38 C60,28 56,18 50,10" stroke="#E8C97E" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="8" r="5" fill="#C9993F" opacity="0.9"/>
+          <circle cx="50" cy="8" r="3" fill="#E8C97E"/>
+          <circle cx="50" cy="8" r="1.5" fill="#1B3A5C"/>
+        </svg>
+        <div class="lockup-text">
+          <div class="lockup-name" style="color:var(--blue);">Strands of Hope</div>
+          <div class="lockup-tagline" style="color:#999;">Supporting Youth in Israel</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-info">
+      <h3>Horizontal Lockup — Light</h3>
+      <p>Light background version with deep blue replacing the white strand. For documents, letterheads, and light surfaces.</p>
+    </div>
+  </div>
+
+  <!-- 3. Icon Only — Dark -->
+  <div class="card">
+    <div class="preview dark" style="gap:2.5rem;">
+      <svg width="70" height="84" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+      <svg width="64" height="64" viewBox="0 0 80 80"><use href="#logo-icon"/></svg>
+    </div>
+    <div class="card-info">
+      <h3>Icon Variants — Dark</h3>
+      <p>Standalone icon mark for favicons, social media avatars, and app icons. Two versions: full and compact circular.</p>
+    </div>
+  </div>
+
+  <!-- 4. Minimal Mark -->
+  <div class="card">
+    <div class="preview grad">
+      <svg width="50" height="63" viewBox="0 0 60 76"><use href="#logo-minimal"/></svg>
+    </div>
+    <div class="card-info">
+      <span class="badge alt">Simplified</span>
+      <h3>Minimal Torch</h3>
+      <p>Simplified three-strand mark for small sizes. Three parallel strands converge to a single point of light — like a torch of hope carried forward.</p>
+    </div>
+  </div>
+
+  <!-- 5. Knot Pattern -->
+  <div class="card">
+    <div class="preview dark">
+      <svg width="80" height="80" viewBox="0 0 100 100"><use href="#logo-knot"/></svg>
+    </div>
+    <div class="card-info">
+      <span class="badge alt">Alternative</span>
+      <h3>Celtic Knot Pattern</h3>
+      <p>Three strands form an eternal knot — representing the unbreakable bond between the UK charity and Israeli youth. Inspired by British Celtic tradition.</p>
+    </div>
+  </div>
+
+  <!-- 6. Stacked — Light -->
+  <div class="card">
+    <div class="preview light">
+      <div class="stacked">
+        <svg width="60" height="76" viewBox="0 0 60 76">
+          <!-- Light-BG minimal version -->
+          <path d="M14,72 C14,60 22,52 26,44 C30,36 34,32 34,24 C34,16 32,12 30,6" 
+                stroke="#C9993F" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M30,72 C30,60 30,52 30,44 C30,36 28,32 28,24 C28,16 30,12 30,6" 
+                stroke="#1B3A5C" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <path d="M46,72 C46,60 38,52 34,44 C30,36 26,32 26,24 C26,16 28,12 30,6" 
+                stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <circle cx="30" cy="5" r="4" fill="#C9993F"/>
+          <circle cx="30" cy="5" r="2.5" fill="#E8C97E"/>
+          <circle cx="30" cy="5" r="1.2" fill="#1B3A5C"/>
+        </svg>
+        <div>
+          <div class="lockup-name" style="color:var(--blue); font-size:1.3rem;">Strands of Hope</div>
+          <div class="lockup-tagline" style="color:#aaa;">UK Charity · At-Risk Youth · Israel</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-info">
+      <h3>Stacked Lockup — Light</h3>
+      <p>Vertical/stacked arrangement for square formats, certificates, and event materials.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ========================================= -->
+<!--             SIZE REFERENCE                -->
+<!-- ========================================= -->
+<div class="sizes">
+  <h2>Size Reference</h2>
+  <div class="sizes-row">
+    <div class="size-item">
+      <svg width="16" height="20" viewBox="0 0 60 76"><use href="#logo-minimal"/></svg>
+      <span>16px Favicon</span>
+    </div>
+    <div class="size-item">
+      <svg width="28" height="34" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+      <span>28px Nav Small</span>
+    </div>
+    <div class="size-item">
+      <svg width="48" height="58" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+      <span>48px Nav</span>
+    </div>
+    <div class="size-item">
+      <svg width="80" height="96" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+      <span>80px Hero</span>
+    </div>
+    <div class="size-item">
+      <svg width="120" height="144" viewBox="0 0 100 120"><use href="#logo-main"/></svg>
+      <span>120px Print</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================= -->
+<!--          COLOR PALETTE REF                -->
+<!-- ========================================= -->
+<div class="sizes" style="margin-bottom:0;">
+  <h2>Brand Colour Palette</h2>
+  <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:1rem;">
+    <div style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:12px;background:#1B3A5C;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></div>
+      <div style="font-size:0.72rem;font-weight:600;">Deep Blue</div>
+      <div style="font-size:0.65rem;color:#999;">#1B3A5C</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:12px;background:#C9993F;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></div>
+      <div style="font-size:0.72rem;font-weight:600;">Gold</div>
+      <div style="font-size:0.65rem;color:#999;">#C9993F</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:12px;background:#E8C97E;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);"></div>
+      <div style="font-size:0.72rem;font-weight:600;">Light Gold</div>
+      <div style="font-size:0.65rem;color:#999;">#E8C97E</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:12px;background:#FFFFFF;border:1px solid #ddd;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div>
+      <div style="font-size:0.72rem;font-weight:600;">White</div>
+      <div style="font-size:0.65rem;color:#999;">#FFFFFF</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:12px;background:#F8F7F4;border:1px solid #ddd;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></div>
+      <div style="font-size:0.72rem;font-weight:600;">Off-White</div>
+      <div style="font-size:0.65rem;color:#999;">#F8F7F4</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

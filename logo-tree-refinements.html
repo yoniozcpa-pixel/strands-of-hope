@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Growing Strands - Logo Refinements</title>
+<style>
+  :root {
+    --blue: #1B3A5C;
+    --gold: #C9993F;
+    --gold-light: #E8C97E;
+    --white: #FFFFFF;
+    --bg: #F8F7F4;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--blue);
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  h1 { font-family: Georgia, serif; margin-bottom: 10px; }
+  p.subtitle { max-width: 600px; margin: 0 auto 40px; line-height: 1.6; color: #555; }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-container {
+    width: 140px;
+    height: 140px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(27, 58, 92, 0.2);
+  }
+  
+  h2 { margin: 0 0 10px; font-size: 1.2rem; }
+  p.desc { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+  <h1>The Growing Strands</h1>
+  <p class="subtitle">
+    Refining the first concept: Three strands weaving together to form a strong trunk, branching out into leaves/sparks.
+  </p>
+
+  <div class="grid">
+
+    <!-- Variation A: Original (Simple) -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="72" height="72" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 60 C24 45 32 40 32 32 C32 24 20 20 16 12" stroke="#C9993F" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 60 C40 45 32 40 32 32 C32 24 44 20 48 12" stroke="#E8C97E" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 60 L32 32 C32 20 32 16 32 8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="16" cy="12" r="4" fill="#C9993F"/>
+          <circle cx="48" cy="12" r="4" fill="#E8C97E"/>
+          <circle cx="32" cy="6" r="4" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <h2>A. The Original</h2>
+      <p class="desc">Clean, minimal, and abstract. The strands merge at the center and branch out symmetrically.</p>
+    </div>
+
+    <!-- Variation B: Woven Trunk -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="72" height="72" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Left strand (Gold) -->
+          <path d="M18 60 C18 45 32 45 32 32 C32 20 20 20 14 10" stroke="#C9993F" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Right strand (Light Gold) -->
+          <path d="M46 60 C46 45 32 45 32 32 C32 20 44 20 50 10" stroke="#E8C97E" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Center strand (White) -->
+          <path d="M32 60 C32 50 24 40 32 32 C40 24 32 16 32 6" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+          
+          <!-- Leaves (Teardrop shapes instead of circles) -->
+          <path d="M14 10 C10 6 10 2 14 2 C18 2 18 6 14 10 Z" fill="#C9993F"/>
+          <path d="M50 10 C46 6 46 2 50 2 C54 2 54 6 50 10 Z" fill="#E8C97E"/>
+          <path d="M32 6 C28 2 28 -2 32 -2 C36 -2 36 2 32 6 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <h2>B. Woven Trunk & Leaves</h2>
+      <p class="desc">The strands cross over each other more dynamically in the trunk, and the "sparks" are shaped more like leaves.</p>
+    </div>
+
+    <!-- Variation C: The Canopy -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="72" height="72" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Trunk -->
+          <path d="M26 60 C26 40 32 36 32 28" stroke="#C9993F" stroke-width="4" stroke-linecap="round"/>
+          <path d="M38 60 C38 40 32 36 32 28" stroke="#E8C97E" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 60 L32 28" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          
+          <!-- Canopy / Branches -->
+          <path d="M32 28 C20 28 12 20 12 12" stroke="#C9993F" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 28 C44 28 52 20 52 12" stroke="#E8C97E" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 28 C32 16 32 12 32 4" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          
+          <!-- Dots -->
+          <circle cx="12" cy="12" r="3" fill="#C9993F"/>
+          <circle cx="52" cy="12" r="3" fill="#E8C97E"/>
+          <circle cx="32" cy="4" r="3" fill="#FFFFFF"/>
+          <circle cx="22" cy="16" r="2.5" fill="#E8C97E"/>
+          <circle cx="42" cy="16" r="2.5" fill="#C9993F"/>
+        </svg>
+      </div>
+      <h2>C. The Canopy</h2>
+      <p class="desc">The strands merge tightly at the base and then spread out wide like a protective canopy, with more "sparks" of hope.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

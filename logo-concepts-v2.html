@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Strands of Hope - Logo Concepts V2</title>
+<style>
+  :root {
+    --blue: #1B3A5C;
+    --gold: #C9993F;
+    --gold-light: #E8C97E;
+    --white: #FFFFFF;
+    --bg: #F8F7F4;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--blue);
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  h1 { font-family: Georgia, serif; margin-bottom: 10px; }
+  p.subtitle { max-width: 600px; margin: 0 auto 40px; line-height: 1.6; color: #555; }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-5px); }
+  
+  .logo-container {
+    width: 120px;
+    height: 120px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(27, 58, 92, 0.2);
+  }
+  
+  h2 { margin: 0 0 10px; font-size: 1.2rem; }
+  p.desc { font-size: 0.9rem; color: #666; margin: 0; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+  <h1>Strands of Hope - Logo Concepts</h1>
+  <p class="subtitle">
+    Designed for a UK charity supporting at-risk youth in Israel.<br>
+    These concepts combine elements of weaving (strands), growth/youth, and connection.
+  </p>
+
+  <div class="grid">
+
+    <!-- Concept 1: The Growing Tree -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Roots/Trunk weaving -->
+          <path d="M24 60 C24 45 32 40 32 32 C32 24 20 20 16 12" stroke="#C9993F" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 60 C40 45 32 40 32 32 C32 24 44 20 48 12" stroke="#E8C97E" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 60 L32 32 C32 20 32 16 32 8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+          <!-- Leaves / Sparks of hope -->
+          <circle cx="16" cy="12" r="4" fill="#C9993F"/>
+          <circle cx="48" cy="12" r="4" fill="#E8C97E"/>
+          <circle cx="32" cy="6" r="4" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <h2>1. The Growing Strands</h2>
+      <p class="desc">Three strands weave together to form a strong trunk, branching out into leaves/sparks. Represents youth growth and flourishing through support.</p>
+    </div>
+
+    <!-- Concept 2: The Embrace -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer protective strands (UK/Charity) -->
+          <path d="M32 56 C10 56 10 24 32 12" stroke="#C9993F" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 56 C54 56 54 24 32 12" stroke="#E8C97E" stroke-width="4" stroke-linecap="round"/>
+          <!-- Inner strand (Youth) -->
+          <path d="M32 44 C24 44 24 28 32 22 C40 28 40 44 32 44 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <h2>2. The Embrace</h2>
+      <p class="desc">Two outer strands form a protective shield or hands wrapping around a bright inner core (the youth). Symbolizes care, safety, and the UK-Israel connection.</p>
+    </div>
+
+    <!-- Concept 3: Woven Star -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Triangle 1 -->
+          <path d="M32 10 L52 46 L12 46 Z" stroke="#C9993F" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Triangle 2 -->
+          <path d="M32 54 L12 18 L52 18 Z" stroke="#E8C97E" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Inner woven circle -->
+          <circle cx="32" cy="32" r="12" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 4"/>
+        </svg>
+      </div>
+      <h2>3. The Woven Star</h2>
+      <p class="desc">A subtle nod to Israel (Star of David) created by overlapping strands, bound together by a central circle representing unity and the continuous cycle of hope.</p>
+    </div>
+
+    <!-- Concept 4: The Bridge / Arch -->
+    <div class="card">
+      <div class="logo-container">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Arch strands -->
+          <path d="M10 54 C10 20 54 20 54 54" stroke="#C9993F" stroke-width="5" stroke-linecap="round"/>
+          <path d="M18 54 C18 30 46 30 46 54" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+          <path d="M26 54 C26 40 38 40 38 54" stroke="#E8C97E" stroke-width="5" stroke-linecap="round"/>
+          <!-- Sun / Hope -->
+          <circle cx="32" cy="24" r="6" fill="#C9993F"/>
+        </svg>
+      </div>
+      <h2>4. The Bridge of Hope</h2>
+      <p class="desc">Strands forming a strong arch or bridge, representing the connection between the UK and Israel. The rising sun beneath the arch symbolizes a new dawn for the youth.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
